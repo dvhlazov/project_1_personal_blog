@@ -1,0 +1,60 @@
+.capriola-regular {
+  font-family: "Capriola", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(242, 244, 247);
+}
+.container {
+    width: 1110px;
+    padding: 0;
+    margin: 0 auto;
+}
+h1 {
+    padding-top: 20px;
+    background: linear-gradient(132.83deg, rgb(196, 23, 64),rgb(234, 156, 40));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    font-size: 76px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -3%;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(71, 84, 103);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.typing-text {
+    font-family: 'Courier New', Courier, monospace; /* Моноширинний шрифт для ефекту друку */
+    white-space: nowrap; /* Забезпечує, що текст не переноситься на новий рядок */
+    overflow: hidden; /* Сховати частину тексту, що виходить за межі контейнера */
+    border-right: 2px solid; /* Додає курсор */
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite; /* Додає анімацію друку та миготіння курсору */
+  }
+  
+  @keyframes typing {
+    from { width: 0; } /* Починається з нульової ширини */
+    to { width: 100%; } /* Зростає до повної ширини */
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; } /* Курсор прозорий */
+    50% { border-color: black; } /* Курсор чорний */
+  }

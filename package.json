@@ -1,0 +1,36 @@
+{
+  "name": "project_1_personal_blog",
+  "version": "1.0.0",
+  "description": "My first own project on WebDev",
+  "main": "server.js",
+  "type": "module",
+  "bin": {
+    "project_1_personal_blog": "bin/www.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www.js",
+    "dev": "nodemon ./bin/www.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvhlazov/project_1_personal_blog.git"
+  },
+  "keywords": [
+    "blog",
+    "project_1"
+  ],
+  "author": "Daniil Glazov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvhlazov/project_1_personal_blog/issues"
+  },
+  "homepage": "https://github.com/dvhlazov/project_1_personal_blog#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.4"
+  }
+}
