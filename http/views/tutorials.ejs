@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="/main.css">
+    <title>Tutorials</title>
+    <link rel="stylesheet" href="/styles/dailyDigest.css">
 
      <!---FONTS-->
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
                 <div class="navi">
                     <a href="/daily_digest"><span>Daily Digest</span></a>
                     <a href="/design_tools"><span>Design Tools</span></a>
-                    <a href="/tutorials"><span>Tutorials</span></a>
+                    <a href="/tutorials"><span class="selected">Tutorials</span></a>
                 </div>
                 <a href="#subscribe_now">
                     <div class="btn">Subscribe</div>
@@ -38,8 +38,8 @@
         <div class="container">
             <div class="main_header">
                
-                <h2>Minimal blog template for creative expressions</h2>
-                <span>100% customisable and SEO-friendly blog template for personal and commercial purposes.</span>
+                <h2>Tutorials </h2>
+                <span>A description of the respective category goes right here. Be as expressive as possible, but in brief.</span>
             </div>
         </div>
     </div>
@@ -48,148 +48,37 @@
             <div class="main_header_latest">
                     <!--WORK WITH DATABASE:MVC-->
 <!--Daily Digest MODEL-->
-                <div id="daily_digest" class="content_box">
-                    <div class="section_header">
-                        <span>Daily Digest</span>
-                        <a href=""><div class="btn_view_all">View all</div></a>
-                    </div>
-                    <div class="section_main">
-                        <div class="section_main_date_text">
-                            <div class="section_main_date">
-                                <span>august 13, 2021</span>
-                            </div>
-                            <div class="section_main_text">
-                                 <h4>10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</h4>
-                                 <span>Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</span>
-                            </div>
-                        </div>
-                        <div class="section_main_image"><img src="/images/daily_digest/d_d.1.png" alt=""></div>
-                    </div>
-
-                    <div class="section_main">
-                        <div class="section_main_date_text">
-                            <div class="section_main_date">
-                                <span>august 13, 2021</span>
-                            </div>
-                            <div class="section_main_text">
-                                 <h4>10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</h4>
-                                 <span>Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</span>
-                            </div>
-                        </div>
-                        <div class="section_main_image"><img src="/images/daily_digest/d_d.1.png" alt=""></div>
-                    </div>
-
-                    <div class="section_main">
-                        <div class="section_main_date_text">
-                            <div class="section_main_date">
-                                <span>august 13, 2021</span>
-                            </div>
-                            <div class="section_main_text">
-                                 <h4>10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</h4>
-                                 <span>Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</span>
-                            </div>
-                        </div>
-                        <div class="section_main_image"><img src="/images/daily_digest/d_d.1.png" alt=""></div>
-                    </div>
-
-                    
+<div id="tutorials" class="content_box">
+    
+    <% tutorials.forEach(tutorial => { %>
+    <a href="/tutorials/<%= tutorial.id %>">
+        <div class="section_main">
+            <div class="section_main_date_text">
+                <div class="section_main_date">
+                    <span><%= tutorial.date %></span>
                 </div>
-<!--DESIGN TOOLS MODEL-->
-                <div id="design_tools" class="content_box">
-                    <div class="section_header">
-                        <span>Design Tools</span>
-                        <a href=""><div class="btn_view_all">View all</div></a>
-                    </div>
-                    <div class="section_main">
-                        <div class="section_main_date_text">
-                            <div class="section_main_date">
-                                <span>august 13, 2021</span>
-                            </div>
-                            <div class="section_main_text">
-                                <h4>10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</h4>
-                                <span>Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</span>
-                            </div>
-                        </div>
-                        <div class="section_main_image"><img src="/images/daily_digest/d_d.1.png" alt=""></div>
-                    </div>
-
-                    <div class="section_main">
-                        <div class="section_main_date_text">
-                            <div class="section_main_date">
-                                <span>august 13, 2021</span>
-                            </div>
-                            <div class="section_main_text">
-                                 <h4>10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</h4>
-                                 <span>Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</span>
-                            </div>
-                        </div>
-                        <div class="section_main_image"><img src="/images/daily_digest/d_d.1.png" alt=""></div>
-                    </div>
-
-                    <div class="section_main">
-                        <div class="section_main_date_text">
-                            <div class="section_main_date">
-                                <span>august 13, 2021</span>
-                            </div>
-                            <div class="section_main_text">
-                                 <h4>10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</h4>
-                                 <span>Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</span>
-                            </div>
-                        </div>
-                        <div class="section_main_image"><img src="/images/daily_digest/d_d.1.png" alt=""></div>
-                    </div>
-
+                <div class="section_main_text">
+                    <h4><%= tutorial.title %></h4>
+                    <span><%= tutorial.summary %></span>
                 </div>
-<!--TUTORIALS MODEL-->
-                <div id="tutorials" class="content_box">
-                    <div class="section_header">
-                        <span>Tutorials</span>
-                        <a href=""><div class="btn_view_all">View all</div></a>
-                    </div>
-                    <div class="section_main">
-                        <div class="section_main_date_text">
-                             <div class="section_main_date">
-                                  <span>august 13, 2021</span>
-                             </div>
-                            <div class="section_main_text">
-                                <h4>10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</h4>
-                                <span>Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</span>
-                            </div>
-                        </div>
-                        <div class="section_main_image"><img src="/images/daily_digest/d_d.1.png" alt=""></div>
-                    </div>
+            </div>
+            <div class="section_main_image">
+                <img src="<%= tutorial.imageUrl %>" alt="<%= tutorial.title %> Image">
+            </div>
+        </div>
+    </a>
+    <% }) %>
+</div>
+<div class="section_header">
+    <a href=""><div class="btn_view_all">More Articles</div></a>
+</div>
 
-                    <div class="section_main">
-                        <div class="section_main_date_text">
-                            <div class="section_main_date">
-                                <span>august 13, 2021</span>
-                            </div>
-                            <div class="section_main_text">
-                                 <h4>10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</h4>
-                                 <span>Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</span>
-                            </div>
-                        </div>
-                        <div class="section_main_image"><img src="/images/daily_digest/d_d.1.png" alt=""></div>
-                    </div>
-
-                    <div class="section_main">
-                        <div class="section_main_date_text">
-                            <div class="section_main_date">
-                                <span>august 13, 2021</span>
-                            </div>
-                            <div class="section_main_text">
-                                 <h4>10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</h4>
-                                 <span>Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.</span>
-                            </div>
-                        </div>
-                        <div class="section_main_image"><img src="/images/daily_digest/d_d.1.png" alt=""></div>
-                    </div>
 
 
                 </div>
             </div>
         </div>
-    </div>
+    
                         <!---FOOTER-->
     <div class="bg_footer">
         <div class="container">

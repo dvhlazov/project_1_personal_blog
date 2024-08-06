@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= article.title %></title>
+    <link rel="stylesheet" href="/styles/articles.css">
+
+    <!---FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!---Capriola and Poppins Fonts-->
+
+</head>
+<body>
+    <div class="header_bg">
+        <div class="container">
+            <div class="header">
+                <a href="/main" class="logo_link">
+                    <div class="logo">
+                        <img src="/images/header/heading.svg" alt="logo" id="logo_header">
+                        <img src="/images/header/tm.svg" alt="logo_tm" id="logo_tm">
+                    </div>
+                </a>
+                <div class="navi">
+                    <a href="/daily_digest"><span class="<%= selectedCategory === 'Daily Digest' ? 'selected' : '' %>">Daily Digest</span></a>
+                    <a href="/design_tools"><span class="<%= selectedCategory === 'Design Tools' ? 'selected' : '' %>">Design Tools</span></a>
+                    <a href="/tutorials"><span class="<%= selectedCategory === 'Tutorials' ? 'selected' : '' %>">Tutorials</span></a>
+                </div>
+                <a href="#subscribe_now">
+                    <div class="btn">Subscribe</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main_header_bg">
+        <div class="container">
+            <div class="main_header">
+                <h2><%= article.title %></h2>
+                <span><%= article.date %></span>
+                <span>|</span>
+                <span><%= article.category %></span>
+                <img src="<%= article.imageUrl %>" alt="Article Image">
+                <div class="article_content">
+                    <p><%= article.content %></p>
+                    <% if (article.imageUrl2) { %>
+                        <div class="image2"><img src="<%= article.imageUrl2 %>" alt="Additional Image"></div>
+                    <% } %>
+                    <div class="main_thing"><span><%= article.mainThing %></span></div>
+                    <p><%= article.content2 %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_header_latest_bg">
+        <div class="container">
+            <div class="main_header_latest">
+                <div id="tutorials" class="content_box">
+                    <span>Recommended articles</span>
+                    
+                    <% tutorials.forEach(tutorial => { %>
+                        
+                    <a href="/tutorials/<%= tutorial.id %>">
+                        <div class="section_main">
+                            <div class="section_main_date_text">
+                                <div class="section_main_date">
+                                    <span><%= tutorial.date %></span>
+                                </div>
+                                <div class="section_main_text">
+                                    <h4><%= tutorial.title %></h4>
+                                    <span><%= tutorial.summary %></span>
+                                </div>
+                            </div>
+                            <div class="section_main_image">
+                                <img src="<%= tutorial.imageUrl %>" alt="<%= tutorial.title %> Image">
+                            </div>
+                        </div>
+                    </a>
+                    <% }) %>
+                </div>
+        </div>
+    </div>
+
+    <!---FOOTER-->
+    <div class="bg_footer">
+        <div class="container">
+            <div class="footer">
+                <div class="footer_main">
+                    <div class="subscribe_menu" id="subscribe_now">
+                        <h4>Personally Newsletter</h4>
+                        <span>A bi-weekly newsletter of design inspiration, resources and anything related to career development.</span>
+                        <div class="subscribe_form">
+                            <div class="subscribe_email"><input type="email" title="Email" placeholder="Email address"></div>
+                            <div class="subscribe_btn"><button>Subscribe</button></div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bot"><span>Copyright (2024) - Daniil Glazov</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

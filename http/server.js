@@ -8,6 +8,9 @@ import designToolsRouter from './routes/design_tools.js';
 import tutorialsRouter from './routes/tutorials.js';
 
 
+
+
+
 const run = () => {
     const server = express();
 
@@ -26,6 +29,10 @@ const run = () => {
     server.use('/daily_digest', dailyDigestRouter);
     server.use('/design_tools', designToolsRouter);
     server.use('/tutorials', tutorialsRouter);
+    
+  
+  
+   
 
     server.use((req, res, next) => {
         next(createError(404));
@@ -45,5 +52,7 @@ const run = () => {
 
     return server;
 };
+
+
 
 export default run;
